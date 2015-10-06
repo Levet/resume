@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-md-2">
+		<div class="thumbnail">
+			<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0ac/07b/39f36ce.jpg">
+		</div>
+	</div>
+	<div class="col-md-10">
+		<h1 class="page-header">Jordan Levet - Full Stack Developer</h1>
+		<ul class="list-unstyled">
+		<li>
+			<a><i class="fa fa-github-square"></i> Github</a>
+		</li>
+		<li>
+			<a><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+		</li>
+	</div>
+</div>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Languages</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="language in languages | orderBy: '-proficiency'">
+				<div class="row">
+					<div class="col-md-8">{{language.name}}</div>
+					<div class="col-md-4">
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{language.proficiency}}%;">
+								{{language.proficiency}}%
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="panel panel-primary">
+	<div class="panel-heading">Technologies</div>
+	<div class="panel-body">
+		<div class="arrayStyle">
+			<span class="arrayStyleItem" ng-repeat="technology in technologies">{{technology}}</span>
+		</div>
+	</div>
+</div>

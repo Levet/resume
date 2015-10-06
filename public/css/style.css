@@ -1,0 +1,32 @@
+.progress{
+	margin: 0;
+}
+
+.page-header{
+	margin-top: 0;
+}
+
+.arrayStyle:before{
+	content: "[";
+	color: silver;
+}
+
+.arrayStyle:after{
+	content: "]";
+	color: silver;
+}
+
+.arrayStyleItem:before{
+	content: '"';
+	color: silver;
+}
+
+.arrayStyleItem:after{
+	content: '", ';
+	color: silver;
+}
+
+.arrayStyleItem:last-child:after{
+	content: '"';
+	color: silver;
+}
