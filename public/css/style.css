@@ -30,3 +30,26 @@
 	content: '"';
 	color: silver;
 }
+
+.input-sm{
+	margin: -5px;
+}
+
+.contact{
+	position: fixed;
+	right:0;
+}
+
+.recommendationDate{
+	font-style: italic;
+}
+
+.axis path {
+    fill: none;
+    stroke: #777;
+    
+}
+.axis text {
+    font-family: Lato;
+    font-size: 13px;
+}

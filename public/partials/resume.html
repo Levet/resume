@@ -6,19 +6,72 @@
 	</div>
 	<div class="col-md-10">
 		<h1 class="page-header">Jordan Levet - Full Stack Developer</h1>
-		<ul class="list-unstyled">
-		<li>
-			<a><i class="fa fa-github-square"></i> Github</a>
-		</li>
-		<li>
-			<a><i class="fa fa-linkedin-square"></i> LinkedIn</a>
-		</li>
+		<div class="col-md-5">
+			<ul class="list-unstyled">
+				<li>
+					<a href="https://github.com/Levet/"><i class="fa fa-github-square"></i> Github</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/pub/jordan-levet/64/501/2a2"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-5">
+			<ul class="list-unstyled">
+				<li>(801) 618-8350</li>
+			</ul>
+		</div>
+		<div class="col-md-5">
+			<ul class="list-unstyled">
+				<li>430 Torry Circle Sandy, UT 84070</li>
+			</ul>
+		</div>
+		<div class="col-md-5">
+			<ul class="list-unstyled">
+				<li></li>
+			</ul>
+		</div>
 	</div>
 </div>
 
 <div class="panel panel-primary">
-	<div class="panel-heading">Languages</div>
+	<div class="panel-heading">Bio</div>
+	<div class="panel-body"></div>
+</div>
+
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Why me?</div>
 	<div class="panel-body">
+		<accordion close-others="oneAtATime">
+			<accordion-group is-open="status.open[1]">
+		      	<accordion-heading>
+		        	Self Motivated <i class="pull-right fa" ng-class="{'fa-chevron-down': status.open[1], 'fa-chevron-right': !status.open[1]}"></i>
+      			</accordion-heading>
+      			I love to code. Loving to do my job, makes it easy to self motivate. On a typical day I spend 10-14 hours coding. Eight of which are required by job.
+      			I like to spend my hobby coding hours on projects that fascinate me, or even on actual work jobs that excite me. So, you're getting a lot of bang for your buck.
+      		</accordion-group>
+			<accordion-group is-open="status.open[2]">
+		      	<accordion-heading>
+		        	Team Player <i class="pull-right fa" ng-class="{'fa-chevron-down': status.open[2], 'fa-chevron-right': !status.open[2]}"></i>
+      			</accordion-heading>
+      			I understand the need to function as a team. I love working as a team. It's awesome to see what three or more brains can do when set to a task. It's awesome to utilize each
+      			team member's talents to achieve and ultimate goal. I also work well as a team leader.
+      		</accordion-group>
+      		<accordion-group is-open="status.open[3]">
+		      	<accordion-heading>
+		        	Quick Study <i class="pull-right fa" ng-class="{'fa-chevron-down': status.open[3], 'fa-chevron-right': !status.open[3]}"></i>
+      			</accordion-heading>
+      			Puzzles are my thing and learning sort of plays into that. I learn new languages and technologies quickly. 
+      		</accordion-group>
+		</accordion>
+	</div>	
+</div>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Languages <span class="badge">{{languages.length}}</span></div>
+	<div class="panel-body">
+
 		<ul class="list-group">
 			<li class="list-group-item" ng-repeat="language in languages | orderBy: '-proficiency'">
 				<div class="row">
@@ -36,10 +89,39 @@
 	</div>
 </div>
 <div class="panel panel-primary">
-	<div class="panel-heading">Technologies</div>
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-md-8">Technologies <span class="badge">{{technologies.length}}</span></div>
+			<div class="col-md-4">
+			  <input type="text" class="form-control input-sm" placeholder="Filter technologies by..." ng-model="techFilter">
+			</div>
+		</div>
+	</div>
 	<div class="panel-body">
 		<div class="arrayStyle">
-			<span class="arrayStyleItem" ng-repeat="technology in technologies">{{technology}}</span>
+			<span class="arrayStyleItem" ng-repeat="technology in technologies | filter:techFilter">{{technology}}</span>
 		</div>
+	</div>
+</div>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Recommendations
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="recommendation in recommendations">
+				<div class="row">
+					<div class="col-md-10">
+						<h4>{{recommendation.author}}</h4>
+						<span class="recommendationDate">{{recommendation.date}}</span>
+						<p class="recommendation">{{recommendation.recommendation}}</p>
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-default btn-sm" ng-click="recommendationToggle($index)">{{ recommendation.displayMore && "Read Less" || "Read More" }}</button>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>

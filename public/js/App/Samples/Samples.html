@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Fibonacci Sequence</div>
+	<div class="panel-body">
+		Looping
+		<pre>
+			<code class="language-js">
+				function fibonacci(iterator){
+					var a = 0, b = 1;
+					for(i=0; i < iterator; i++){
+					    var c = a,
+					        a = b,
+					        b = c + b;
+					}
+					return a;
+				}
+
+				fibonacci(10)
+			</code>
+	</div>
+</div>
+<div class="panel panel-primary">
+	<div class="panel-heading">Fizz Buzz</div>
+	<div class="panel-body">
+		<pre>
+			<code class="language-js">
+				function fizzBuzz(countTo){
+					for(var i = 1; i <= countTo; i++){
+						if(i % 3 == 0 && i % 5 == 0){
+							console.log("FizzBuzz")
+						} else if(i % 5 == 0) {
+							console.log("Buzz")
+						} else if(i % 3 == 0) {
+							console.log("Fizz")
+						} else {
+							console.log(i)
+						}
+					}
+				};
+
+				fizzBuzz(100);
+			</code>
+		</pre>
+	</div>
+</div>
