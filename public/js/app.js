@@ -16,12 +16,12 @@ resume.config(function($stateProvider, $urlRouterProvider){
     })
     .state('charts', {
         url: '/charts',
-        templateUrl: '/js/App/Charts/charts.html',
+        templateUrl: '/js/App/Charts/Charts.html',
         controller: 'ChartsController'
     })
     .state('samples', {
         url: '/samples',
-        templateUrl: '/js/App/Samples/samples.html',
+        templateUrl: '/js/App/Samples/Samples.html',
         controller: 'SamplesController'
     })
 })
