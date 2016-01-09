@@ -21,13 +21,9 @@
 				.then(function(response){
 					console.log(response)
 					var data = response.data.dataset.data;
-					console.log(data)
 					var svg = d3.select('.lineChart')
 					width = (elem[0].parentNode.offsetWidth - margin.left - margin.right)
 					svg.attr('width', width);
-
-					var mindate = new Date(2014,5,26),
-					    maxdate = new Date(2015,5,27);
 	            
 			        xScale = d3.time.scale().domain(d3.extent(data, function(d) { return new Date(d[0]) })).range([margin.left, width-margin.right]);
 					yScale = d3.scale.linear().domain(d3.extent(data, function(d) { return d[1] })).range([height - (margin.top+10), margin.bottom]);
@@ -52,7 +48,7 @@
 					.y(function(d){
 						console.log(d[1])
 						return yScale(d[1]);
-					}).interpolate("basis");
+					}).interpolate("cardinal");
 
 					svg.append('svg:path')
 					.attr('d', lineGenerator(data))
@@ -69,6 +65,42 @@
 						.transition()
 						.attr('stroke-width', 4)
 					})
+
+					var circleRadius = 2;
+
+					data.forEach(function(d){
+
+						svg.append('circle')
+						.attr('class', 'lineChartCircle')
+						.attr('r', circleRadius+2)
+						.attr('cx', function(){
+							return xScale(new Date(d[0]));
+						})
+						.attr('cy', function(){
+							return yScale(d[1]);
+						})
+						.attr('fill', '#FDC879')
+						.attr('stroke', '#fff')
+						.attr('stroke-width', 1)
+						.on('mouseover', function(){
+							d3.select(this).transition()
+							.attr('r', 10)
+							.attr('fill', '#fff')
+							.attr('stroke', '#FDC879')
+						})
+						.on('mouseleave', function(){
+							d3.select(this).transition()
+							.attr('r', circleRadius+2)
+							.attr('fill', '#FDC879')
+							.attr('stroke', '#fff')
+						})
+						.on('click', function(){
+							
+						})
+					})
+
+
+					
 				})
 			}
 		}
