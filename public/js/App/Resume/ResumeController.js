@@ -35,7 +35,8 @@ resume.controller('ResumeCtrl', function ($scope, $modal){
 		"d3js",
 		"Less",
 		"Grunt",
-		"Sass"
+		"Sass",
+
 	];
 
 	$scope.contact = function(){
@@ -48,14 +49,6 @@ resume.controller('ResumeCtrl', function ($scope, $modal){
 	}
 
 	$scope.recommendations = [
-		{
-			author: "Dan Gregson",
-			snippet: "Jordan is one of the best people I've had the chance to work with.",
-			body: "Jordan is one of the best people I've had the chance to work with. At Online Image there were always a deluge of tasks that required many different types of skillsets. Jordan is the type of person that is always excited for a new challenge, so many of these tasks went his way. He is a very fast worker, but the quality does not suffer. Jordan has a can-do mindset. When he is confronted with a challenge or obstacle he takes the time to come up with a proper solution. Jordan is a very fast learner and he loves being challenged. He is very motivated, and his positive and friendly attitude affect company culture in very positive ways.",
-			date: "May 19, 2015",
-			recommendation: "Jordan is one of the best people I've had the chance to work with.",
-			displayMore: false
-		},
 		{
 			author: "Alexis Abbot",
 			snippet: "Jordan's can do attitude has created a very strange niche for him at Online Image.",

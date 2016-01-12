@@ -24,9 +24,6 @@ module.exports = function(app){
 
     // Routes
     app.get('/', resume)
-    app.get('/test', function(req, res){
-        res.render('test')
-    })
    
     return app;
 }

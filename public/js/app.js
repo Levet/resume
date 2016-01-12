@@ -23,5 +23,8 @@ resume.config(function($stateProvider, $urlRouterProvider){
         url: '/samples',
         templateUrl: '/js/App/Samples/Samples.html',
         controller: 'SamplesController'
+    }).state('projects', {
+        url: '/projects',
+        templateUrl: '/js/App/Projects/Projects.html',
     })
 })
