@@ -56,6 +56,8 @@ resume.controller('ResumeCtrl', function ($scope, $modal){
 			date: "February 20, 2015",
 			recommendation: "Jordan is one of the best people I've had the chance to work with.",
 			displayMore: false
+		}, {
+			author: "Ryan Hill"
 		}
 	]
 

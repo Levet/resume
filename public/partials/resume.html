@@ -117,7 +117,7 @@
 						<span class="recommendationDate">{{recommendation.date}}</span>
 						<p class="recommendation">{{recommendation.recommendation}}</p>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-2" ng-if="recommendation.body">
 						<button class="btn btn-default btn-sm" ng-click="recommendationToggle($index)">{{ recommendation.displayMore && "Read Less" || "Read More" }}</button>
 					</div>
 				</div>
