@@ -132,7 +132,7 @@ html.
       // the past seven days.
       gapi.client.analytics.data.ga.get({
         'ids': 'ga:' + profileId,
-        'start-date': '7daysAgo',
+        'start-date': '180daysAgo',
         'end-date': 'today',
         'metrics': 'ga:sessions'
       })
