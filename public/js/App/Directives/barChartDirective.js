@@ -58,13 +58,13 @@
 					.attr('fill', '#000')
     				.attr('y', height - 10)
     				.attr('x', (barWidth*iterator)+(barWidth/2))
-					/*item.on('mouseover', function(){
+					item.on('mouseover', function(){
 						d3.select(this).transition()
-						.attr('fill', '#000')
+						.attr('width', barWidth-10)
 					}).on('mouseleave', function(){
 						d3.select(this).transition()
-						.attr('fill', color(iterator))
-					})*/
+						.attr('width', barWidth-55)
+					})
 					iterator++;
 				})
 			}

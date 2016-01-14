@@ -11,7 +11,7 @@ resume.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider
     .state('resume', {
         url: '/',
-        templateUrl: '/partials/resume.html',
+        templateUrl: '/js/App/Resume/Resume.html',
         controller: 'ResumeCtrl'
     })
     .state('charts', {

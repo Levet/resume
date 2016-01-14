@@ -13,6 +13,7 @@ module.exports = function(app){
             // Get Routes
 
             var resume = require('./routes/resume')(app);
+            var contact = require('./routes/contact')(app);
 
 
     // Configuration
@@ -24,6 +25,8 @@ module.exports = function(app){
 
     // Routes
     app.get('/', resume)
+
+    app.post('/contact', contact);
    
     return app;
 }

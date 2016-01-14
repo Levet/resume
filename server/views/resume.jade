@@ -21,10 +21,10 @@ html(ng-app="resume")
 		script(src="/js/App/Samples/SamplesController.js")
 		script(src="/js/App/Menu/MenuController.js")
 		script(src="/js/App/Resume/ResumeController.js")
+		script(src="/js/App/Contact/ContactsService.js")
 		script(src="/js/App/Modal/ModalController.js")
 		script(src="/js/App/Contact/ContactController.js")
 
 	body
-		div(ng-include="'../../partials/menu.html'")
-		div(ng-include="'../../partials/contact.html'")
+		div(ng-include="'../../js/App/Menu/Menu.html'")
 		.container(ui-view="")
